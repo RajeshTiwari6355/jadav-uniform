@@ -1,0 +1,52 @@
+type Product = 
+ record {
+   category: Category;
+   colors: vec text;
+   description: text;
+   id: nat;
+   imageUrl: text;
+   name: text;
+   price: nat;
+   sizes: vec text;
+ };
+type InquirySubmission = 
+ record {
+   color: text;
+   email: text;
+   message: text;
+   name: text;
+   phone: text;
+   productId: opt nat;
+   quantity: nat;
+   size: text;
+ };
+type InquiryResult = 
+ variant {
+   err: text;
+   ok: nat;
+ };
+type Inquiry = 
+ record {
+   color: text;
+   email: text;
+   id: nat;
+   message: text;
+   name: text;
+   phone: text;
+   productId: opt nat;
+   quantity: nat;
+   size: text;
+   timestamp: int;
+ };
+type Category = 
+ variant {
+   college;
+   school;
+ };
+service : {
+  getInquiries: () -> (vec Inquiry) query;
+  getProductById: (id: nat) -> (opt Product) query;
+  getProducts: () -> (vec Product) query;
+  getProductsByCategory: (category: Category) -> (vec Product) query;
+  submitInquiry: (submission: InquirySubmission) -> (InquiryResult);
+}

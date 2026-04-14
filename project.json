@@ -1,0 +1,24 @@
+{
+  "overview": "Complete showcase website for JADAV UNIFORM — a school and college uniform shop. Features a bold hero section, dual-category product catalog with filtering, individual product detail pages with inquiry forms, an About Us page, and a Contact page. Fully mobile-responsive in navy, white, and gold colors.",
+  "features": [
+    "Hero section with brand name and tagline",
+    "School Uniforms & College Uniforms product catalog",
+    "Size and color filter system",
+    "Product detail pages with Inquire Now form",
+    "About Us page with shop story",
+    "Contact page with address, phone, email and inquiry form",
+    "Mobile-responsive navigation with hamburger menu",
+    "Navy, white and gold color scheme throughout"
+  ],
+  "category": "showcase",
+  "tags": [
+    "uniform",
+    "school",
+    "college",
+    "catalog",
+    "showcase",
+    "inquiry",
+    "retail"
+  ],
+  "last_updated": "2026-04-14T06:40:58.527Z"
+}

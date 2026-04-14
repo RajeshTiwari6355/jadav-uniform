@@ -1,0 +1,43 @@
+// Version: 1.0.0
+type Category__772207400 = {#college; #school};
+type Inquiry__5319170 =
+  {
+    color : Text;
+    email : Text;
+    id : Nat;
+    message : Text;
+    name : Text;
+    phone : Text;
+    productId : ?Nat;
+    quantity : Nat;
+    size : Text;
+    timestamp : Int
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Product__626021756 =
+  {
+    category : Category__772207400;
+    colors : [Text];
+    description : Text;
+    id : Nat;
+    imageUrl : Text;
+    name : Text;
+    price : Nat;
+    sizes : [Text]
+  };
+actor {
+  stable inquiries :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Inquiry__5319170]];
+      var elementIndex : Nat__490723111
+    };
+  stable var nextInquiryId : Nat;
+  stable products :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Product__626021756]];
+      var elementIndex : Nat__490723111
+    }
+};
